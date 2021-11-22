@@ -21,3 +21,7 @@ social();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+
+// Module1-task2: animation
+window.onload = function() {document.querySelector('body').classList.add('active')};
