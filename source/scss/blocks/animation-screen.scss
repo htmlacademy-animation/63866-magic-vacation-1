@@ -22,3 +22,46 @@
     }
   }
 }
+
+// Module1-task2: animation
+@keyframes animationHeader {
+  0% {
+    transform: translateY(-27px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animationFooter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.page-header,
+.page-header__logo {
+  transform: translateY(-27px);
+  opacity: 0;
+}
+.screen__footer {
+  transform: translateY(100%);
+}
+
+body.active {
+  .page-header {
+    animation: animationHeader 2s cubic-bezier(0.6, 0.03, 0, 0.94) forwards;
+  }
+  .page-header__logo {
+    animation: animationHeader 2s cubic-bezier(0.6, 0.03, 0, 0.94) .5s forwards;
+  }
+  .screen__footer {
+    animation: animationFooter 2s cubic-bezier(0.6, 0.03, 0, 0.94) .8s forwards;
+  }
+}
+
